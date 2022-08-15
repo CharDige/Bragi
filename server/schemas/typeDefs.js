@@ -5,6 +5,27 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
+    channel: String
+    genre: String
+    stories: [Story]!
+  }
+
+  type Story {
+    _id: ID
+    storyTitle: String
+    storyDescription: String
+    storyContent: String
+    storyAuthor: String
+    storyGenre: String
+    createdAt: String
+    comments: [Comment]!
+  }
+
+  type Comment {
+    _id: ID
+    commentText: String
+    commentAuthor: String
+    createdAt: String
   }
 
   type Auth {
@@ -14,11 +35,14 @@ const typeDefs = gql`
 
   type Query {
     users: [User]
+    user(username: String!): User
+    stories(username: String!): [Story]
+    story(storyId: ID!): Story
     me: User
   }
 
   type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!, channel: String!, genre: String!): Auth
     login(email: String!, password: String!): Auth
   }
 `;
