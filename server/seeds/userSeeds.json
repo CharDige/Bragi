@@ -2,21 +2,29 @@
   {
     "username": "elliot",
     "email": "elliot@email.com",
-    "password": "password01"
+    "password": "password01",
+    "channel": "Books",
+    "genre": "Action"
   },
   {
     "username": "dory",
     "email": "dory@email.com",
-    "password": "password01"
+    "password": "password01",
+    "channel": "Movies/Films",
+    "genre": "Romance"
   },
   {
     "username": "drew",
     "email": "drew@email.com",
-    "password": "password01"
+    "password": "password01",
+    "channel": "Poetry",
+    "genre": "Comedy"
   },
   {
     "username": "portia",
     "email": "portia@email.com",
-    "password": "password01"
+    "password": "password01",
+    "channel": "Video games",
+    "genre": "Action"
   }
 ]
