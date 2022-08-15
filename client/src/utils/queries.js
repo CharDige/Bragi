@@ -13,6 +13,7 @@ export const QUERY_USER = gql`
         storyTitle
         storyDescription
         storyGenre
+        storyChannel
         createdAt
       }
     }
@@ -27,6 +28,7 @@ export const QUERY_STORIES = gql`
       storyDescription
       storyAuthor
       storyGenre
+      storyChannel
       createdAt
     }
   }
@@ -41,6 +43,7 @@ export const QUERY_SINGLE_STORY = gql`
       storyContent
       storyAuthor
       storyGenre
+      storyChannel
       createdAt
       comments {
         _id
@@ -65,6 +68,7 @@ query Me {
       storyTitle
       storyDescription
       storyGenre
+      storyChannel
       createdAt
     }
   }
