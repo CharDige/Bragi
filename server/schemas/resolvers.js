@@ -48,6 +48,24 @@ const resolvers = {
 
       return { token, user };
     },
+    addStory: async (parent, { storyTitle, storyDescription, storyContent, storyGenre, storyChannel }, context) => {
+      if (context.user) {
+        const story = await Story.create({
+          storyTitle,
+          storyDescription,
+          storyContent,
+          storyGenre,
+          storyChannel,
+          storyAuthor: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { stories: story._id } }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    }
   },
 };
 
