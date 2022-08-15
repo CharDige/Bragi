@@ -12,14 +12,14 @@ const storySchema = new Schema({
     storyDescription: {
         type: String,
         required: true,
-        minlength: 20,
+        minlength: 1,
         maxlength: 500,
         trim: true,
     },
     storyContent: {
         type: String,
         required: true,
-        minlength: 10,
+        minlength: 1,
         trim: true,
     },
     storyAuthor: {
