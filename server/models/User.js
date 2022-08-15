@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const storySchema = require('./Story');
 
 const userSchema = new Schema({
   username: {
@@ -19,6 +20,20 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  channel: {
+    type: String,
+    required: true
+  },
+  genres: {
+    type: String,
+    required: true
+  },
+  stories: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Story',
+    },
+  ],
   // If your user needs more properties, add them here. Don't forget to add them to the typeDefs.js, resolvers.js and the userSeeds.
 });
 
