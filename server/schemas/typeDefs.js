@@ -17,6 +17,7 @@ const typeDefs = gql`
     storyContent: String
     storyAuthor: String
     storyGenre: String
+    storyChannel: String
     createdAt: String
     comments: [Comment]!
   }
