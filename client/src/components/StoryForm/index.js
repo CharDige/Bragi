@@ -61,5 +61,46 @@ const StoryForm = () => {
             console.error(err);
         }
     };
-    
-}
+    return (
+        <div>
+            <h2>
+                Add your story
+            </h2>
+
+            {Auth.loggedIn() ? (
+                <>
+                    <form className="flex-row justify-center justify-space-between-md align-center" onSubmit={handleFormSubmit}>
+                        <div className="col-12 col-lg-9">
+                            <div className="mb-3">
+                                <label htmlFor="storyTitle" className="form-label label-style">Story title</label>
+                                <input value={storyTitle} name="name" type="text" className="form-control input-style" id="storyTitle" placeholder="Story title" />
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="storyDescription" className="form-label label-style">Story description</label>
+                                <input value={storyDescription} name="name" type="text" className="form-control input-style" id="storyDescription" placeholder="Story description" />
+                            </div>
+                        </div>
+
+                        <div className="btn" type="submit">
+                            Add story
+                        </div>
+                        {error && (
+                            <div className="col-12 my-3 bg-danger text-white p-3">
+                                {error.message}
+                            </div>
+                        )}
+                    </form>
+                </>
+            ) : (
+                <>
+                    <p>
+                        Whoops! To add your stories, you need to be logged in. Please{' '}
+                        <Link to="/login">login</Link> or <Link to="/signup">sign up.</Link>
+                    </p>
+                </>
+            )}
+        </div>
+    );
+};
+
+export default StoryForm;
