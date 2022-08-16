@@ -25,3 +25,22 @@ mutation Login($email: String!, $password: String!) {
     }
   }
 }`
+
+export const ADD_STORY = gql`
+  mutation addStory($storyTitle: String!, $storyDescription: String!, $storyContent: String!, storyGenre: String!, storyChannel: String!) {
+    addStory(storyTitle: $storyTitle, storyDescription: $storyDescription, storyContent: $storyContent, storyGenre: $storyGenre, storyChannel: $storyChannel) {
+      _id
+      storyTitle
+      storyDescription
+      storyContent
+      storyAuthor
+      storyGenre
+      storyChannel
+      createdAt
+      comments {
+        _id
+        commentText
+      }
+    }
+  }
+`
