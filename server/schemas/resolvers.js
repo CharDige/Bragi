@@ -65,6 +65,23 @@ const resolvers = {
         );
       }
       throw new AuthenticationError('You need to be logged in!');
+    },
+    addComment: async (parent, { storyId, commentText }, context) => {
+      if (context.user) {
+        return Story.findOneAndUpdate(
+          { _id: storyId },
+          {
+            $addToSet: {
+              comments: { commentText, commentAuthor: context.user.username },
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
     }
   },
 };
