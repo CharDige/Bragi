@@ -44,3 +44,23 @@ export const ADD_STORY = gql`
     }
   }
 `
+
+export const ADD_COMMENT = gql`
+  mutation addComment($storyId: ID!, $commentText: String!) {
+    addComment(storyId: $storyId, commentText: $commentText) {
+      _id
+      storyTitle
+      storyDescription
+      storyContent
+      storyAuthor
+      storyGenre
+      storyChannel
+      createdAt
+      comments {
+        _id
+        commentText
+        createdAt
+      }
+    }
+  }
+`
