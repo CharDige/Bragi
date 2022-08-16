@@ -10,9 +10,10 @@ import Profile from './pages/Profile';
 import NotFound from './pages/Notfound';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+// import SingleStory from './pages/SingleStory';
 
 import Header from './components/Header';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -62,6 +63,14 @@ function App() {
               path="*"
               element={<NotFound />}
             />
+            <Route
+              path="/profiles/:username"
+              element={<Profile />}
+            />
+            {/* <Route
+              path="/stories/:storyId"
+              element={<SingleStory />}
+            /> */}
           </Routes>
         </Container>
         <Footer/>
