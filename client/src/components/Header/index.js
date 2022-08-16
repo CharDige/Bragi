@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Nav from 'react-bootstrap/Nav';
+// import Nav from 'react-bootstrap/Nav';
 
 import Auth from '../../utils/auth';
 
@@ -10,40 +10,44 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <Nav>
-      <Nav.Item>
-        <Nav.Link as={Link} to="/">
-          Home
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link as={Link} to="/profile">
-          Profile
-        </Nav.Link>
-      </Nav.Item>
-      {Auth.loggedIn() ? (
-        <>
-          <Nav.Item>
-            <Nav.Link onClick={logout}>
-              Logout
-            </Nav.Link>
-          </Nav.Item>
-        </>
-      ) : (
-        <>
-          <Nav.Item>
-            <Nav.Link as={Link} to="/login">
-              Login
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link as={Link} to="/signup" >
-              Signup
-            </Nav.Link>
-          </Nav.Item>
-        </>
-      )}
-    </Nav>
+    <header>
+      <nav className="navbar navbar-expand-lg bg-light">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/">Bragi</Link>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              {Auth.loggedIn() ? (
+                <>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/stories">Explore stories</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/profile">Profile</Link>
+                  </li>
+                  <li className="nav-item">
+                    <button className="btn btn-lg btn-light m-2" onClick={logout}>
+                      Logout
+                    </button>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link className="nav-link" to="/login">Login</Link>
+                  </li>
+                  <li>
+                    <Link className="nav-link" to="/signup">Sign up</Link>
+                  </li>
+                </>
+              )}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 };
 
