@@ -110,8 +110,10 @@ const StoryForm = () => {
                             </div>
                         </div>
 
-                        <div className="btn" type="submit">
-                            Add story
+                        <div className="col-12 col-lg-3">
+                            <button className="btn" type="submit">
+                                Add story
+                            </button>
                         </div>
                         {error && (
                             <div className="col-12 my-3 bg-danger text-white p-3">
