@@ -61,6 +61,23 @@ const StoryForm = () => {
             console.error(err);
         }
     };
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+
+        if (name === 'storyTitle') {
+            setStoryTitle(value);
+        } else if (name === 'storyDescription') {
+            setStoryDescription(value);
+        } else if (name === 'storyContent') {
+            setStoryContent(value);
+        } else if (name === 'storyGenre') {
+            setStoryGenre(value);
+        } else {
+            setStoryChannel(value);
+        }
+    }
+
     return (
         <div>
             <h2>
@@ -73,11 +90,23 @@ const StoryForm = () => {
                         <div className="col-12 col-lg-9">
                             <div className="mb-3">
                                 <label htmlFor="storyTitle" className="form-label label-style">Story title</label>
-                                <input value={storyTitle} name="name" type="text" className="form-control input-style" id="storyTitle" placeholder="Story title" />
+                                <textarea value={storyTitle} name="storyTitle" className="form-control input-style" id="storyTitle" placeholder="Story title" onChange={handleInputChange}></textarea>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="storyDescription" className="form-label label-style">Story description</label>
-                                <input value={storyDescription} name="name" type="text" className="form-control input-style" id="storyDescription" placeholder="Story description" />
+                                <textarea value={storyDescription} name="storyDescription" className="form-control input-style" id="storyDescription" placeholder="Story description" onChange={handleInputChange}></textarea>
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="storyContent" className="form-label label-style">Story content</label>
+                                <textarea value={storyContent} name="storyContent" className="form-control input-style" id="storyContent" placeholder="Story content" onChange={handleInputChange}></textarea>
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="storyGenre" className="form-label label-style">Story description</label>
+                                <textarea value={storyGenre} name="storyGenre" className="form-control input-style" id="storyGenre" placeholder="Story genre, like 'Action', 'Horror', 'Satire', etc" onChange={handleInputChange}></textarea>
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="storyChannel" className="form-label label-style">Story description</label>
+                                <textarea value={storyChannel} name="storyChannel" className="form-control input-style" id="storyChannel" placeholder="Story channel, like 'Book', 'Film', 'Video game', etc" onChange={handleInputChange}></textarea>
                             </div>
                         </div>
 
