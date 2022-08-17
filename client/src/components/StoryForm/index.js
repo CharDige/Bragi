@@ -101,11 +101,11 @@ const StoryForm = () => {
                                 <textarea value={storyContent} name="storyContent" className="form-control input-style" id="storyContent" placeholder="Story content" onChange={handleInputChange}></textarea>
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="storyGenre" className="form-label label-style">Story description</label>
+                                <label htmlFor="storyGenre" className="form-label label-style">Story genre</label>
                                 <textarea value={storyGenre} name="storyGenre" className="form-control input-style" id="storyGenre" placeholder="Story genre, like 'Action', 'Horror', 'Satire', etc" onChange={handleInputChange}></textarea>
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="storyChannel" className="form-label label-style">Story description</label>
+                                <label htmlFor="storyChannel" className="form-label label-style">Story channel</label>
                                 <textarea value={storyChannel} name="storyChannel" className="form-control input-style" id="storyChannel" placeholder="Story channel, like 'Book', 'Film', 'Video game', etc" onChange={handleInputChange}></textarea>
                             </div>
                         </div>
