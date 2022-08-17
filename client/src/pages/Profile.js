@@ -3,10 +3,12 @@ import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 
 import StoryForm from '../components/StoryForm';
+import StoryList from '../components/StoryList';
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
 import Auth from '../utils/auth';
+
 
 const Profile = () => {
     const { username: userParam } = useParams();
@@ -42,6 +44,12 @@ const Profile = () => {
                 <h2 className="col-12 col-lg-10">
                     {userParam ? `${user.username}` : 'You'}
                 </h2>
+
+                <div className="col-12 col-lg-10 mb-5">
+                    <StoryList
+                        stories={user.stories}
+                    />
+                </div>
 
                 {!userParam && (
                     <div className="col-12 col-lg-10 mb-3 p-3">
