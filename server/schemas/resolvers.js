@@ -63,6 +63,8 @@ const resolvers = {
           { _id: context.user._id },
           { $addToSet: { stories: story._id } }
         );
+
+        return story;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
