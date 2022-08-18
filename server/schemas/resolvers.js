@@ -84,6 +84,39 @@ const resolvers = {
         );
       }
       throw new AuthenticationError('You need to be logged in!');
+    },
+    removeStory: async (parent, { storyId }, context) => {
+      if (context.user) {
+        const story = await Story.findOneAndDelete({
+          _id: storyId,
+          storyAuthor: context.user.username,
+        });
+  
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { stories: story._id } }
+        );
+  
+        return story
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    removeComment: async (parent, { storyId, commentId }, context) => {
+      if (context.user) {
+        return Story.findOneAndUpdate(
+          { _id: storyId },
+          {
+            $pull: {
+              comments: {
+                _id: commentId,
+                commentAuthor: context.user.username,
+              },
+            },
+          },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
     }
   },
 };
