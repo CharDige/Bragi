@@ -21,10 +21,12 @@ const StoryForm = () => {
             try {
                 const { stories } = cache.readQuery({ query: QUERY_STORIES });
 
-                cache.writeQuery({
-                    query: QUERY_STORIES,
-                    data: { stories: [addStory, ...stories] },
-                });
+                if (stories) {
+                    cache.writeQuery({
+                        query: QUERY_STORIES,
+                        data: { stories: [addStory, ...stories] },
+                    });
+                }
             } catch (e) {
                 console.error(e);
             }
