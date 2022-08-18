@@ -7,6 +7,8 @@ db.once('open', async () => {
   try {
     await User.deleteMany({});
 
+    await Story.deleteMany({});
+
     await User.create(userSeeds);
 
     for (let i = 0; i < storySeeds.length; i++) {
