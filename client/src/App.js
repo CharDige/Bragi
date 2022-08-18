@@ -10,7 +10,7 @@ import Profile from './pages/Profile';
 import NotFound from './pages/Notfound';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-// import SingleStory from './pages/SingleStory';
+import SingleStory from './pages/SingleStory';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -67,10 +67,10 @@ function App() {
               path="/profiles/:username"
               element={<Profile />}
             />
-            {/* <Route
+            <Route
               path="/stories/:storyId"
               element={<SingleStory />}
-            /> */}
+            />
           </Routes>
         </Container>
         <Footer/>
