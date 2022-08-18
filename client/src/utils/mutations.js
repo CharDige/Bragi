@@ -64,3 +64,43 @@ export const ADD_COMMENT = gql`
     }
   }
 `
+
+export const REMOVE_STORY = gql`
+  mutation removeStory($storyId: ID!) {
+    removeStory(storyId: $storyId) {
+      _id
+      storyTitle
+      storyDescription
+      storyContent
+      storyAuthor
+      storyGenre
+      storyChannel
+      createdAt
+      comments {
+        _id
+        commentText
+        createdAt
+      }
+    }
+  }
+`
+
+export const REMOVE_COMMENT = gql`
+  mutation removeComment($storyId: ID!, $commentId: ID!) {
+    removeComment(storyId: $storyId, commentId: $commentId) {
+      _id
+      storyTitle
+      storyDescription
+      storyContent
+      storyAuthor
+      storyGenre
+      storyChannel
+      createdAt
+      comments {
+        _id
+        commentText
+        createdAt
+      }
+    }
+  }
+`
