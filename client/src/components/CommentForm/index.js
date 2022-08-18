@@ -38,4 +38,35 @@ const CommentForm = ({ storyId }) => {
             setCommentText(value);
         }
     };
-}
+
+    return (
+        <div>
+            <p>
+                Comment
+            </p>
+
+            {Auth.loggedIn() ? (
+                <>
+                    <form className="flex-row justify-center justify-space-between-md align-center" onSubmit={handleFormSubmit}>
+                        <div className='col-12 col-lg-9'>
+                            <textarea name="commentText" placeholder='Add your comment' value={commentText} className="form-input w-100" onChange={handleInputChange}></textarea>
+                        </div>
+
+                        <div className='col-12 col-lg-3'>
+                            <button className="btn" type="submit">
+                                Add comment
+                            </button>
+                        </div>
+                    </form>
+                </>
+            ) : (
+                <p>
+                    You need to be logged in to look at stories. Please{' '}
+                    <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+                </p>
+            )}
+        </div>
+    );
+};
+
+export default CommentForm;
