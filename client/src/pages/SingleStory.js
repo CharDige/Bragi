@@ -3,6 +3,9 @@ import React from 'react';
 // Import useParams()
 import { useParams } from 'react-router-dom';
 
+// Import components
+import CommentForm from '../components/CommentForm';
+
 // Import useQuery()
 import { useQuery } from '@apollo/client';
 
@@ -34,6 +37,10 @@ const SingleStory = () => {
                 <p>
                     {story.storyContent}
                 </p>
+            </div>
+
+            <div className='col-12 col-lg-10 mb-3 p-3'>
+                <CommentForm />
             </div>
         </div>
     );
