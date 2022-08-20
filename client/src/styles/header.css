@@ -3,10 +3,10 @@
     background-color: var(--dark-colour);
 }
 
-a.brand-style {
+a.brand-style h1 {
     color: var(--orange);
     font-family: var(--heading-font);
-    font-size: 70px;
+    font-size: 70px !important;
     padding-left: 20px;
 }
 
@@ -32,11 +32,11 @@ p.nav-item-style {
 }
 
 /* Pseudo-styling in header */
-a.brand-style:focus {
+a.brand-style h1:focus {
     color: var(--orange);
 }
 
-a.brand-style:hover {
+a.brand-style h1:hover {
     color: var(--green);
 }
 
