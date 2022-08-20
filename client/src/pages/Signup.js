@@ -41,74 +41,50 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
-            {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Your username"
-                  name="username"
-                  type="text"
-                  value={formState.name}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <textarea
-                  className="form-input"
-                  placeholder="Your favourite channel for stories i.e. Books, Films, Poetry, Video games..."
-                  name="channel"
-                  value={formState.channel}
-                  onChange={handleChange}
-                />
-                <textarea
-                  className="form-input"
-                  placeholder="Your favourite genre of stories i.e. Fantasy, Romance, Action, Satire, etc."
-                  name="genre"
-                  value={formState.genre}
-                  onChange={handleChange}
-                />
-                <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
-
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
+    <main>
+      {data ? (
+        <div className='success-message'>
+          <p>
+            Success! You may now head{' '}
+            <Link to="/">back to the homepage.</Link>
+          </p>
         </div>
-      </div>
+      ) : (
+        <div className="login-signup-form-style">
+          <h2 className='login-signup-heading'>
+            Join us and begin your storytelling
+          </h2>
+          <form onSubmit={handleFormSubmit}>
+            <div className='mb-3'>
+              <label className="form-label">Username</label>
+              <input className="form-control form-input-style" placeholder="Your username" name="username" type="text" value={formState.name} onChange={handleChange} />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Email</label>
+              <input type="email"
+                name="email" className="form-control form-input-style" id="email" placeholder="Your email" value={formState.email} onChange={handleChange} />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Password</label>
+              <input type="password" name="password" className="form-control form-input-style" id="password" placeholder='********' value={formState.password} onChange={handleChange} />
+            </div>
+            <div className='mb-3'>
+              <label className='form-label'>Channel</label>
+              <input className='form-control form-input-style' placeholder="Your favourite channel for stories i.e. Books, Films, Poetry, Video games..." name="channel" value={formState.channel} onChange={handleChange} />
+            </div>
+            <div className='mb-3'>
+              <label className='form-label'>Genre</label>
+              <input className='form-control form-input-style' placeholder='Your favourite genre of stories i.e. Fantasy, Romance, Action, Satire, etc.' name="genre" value={formState.genre} onChange={handleChange} />
+            </div>
+            <button type="submit" className="btn login-signup-btn-style">Submit</button>
+          </form>
+        </div>
+      )}
+      {error && (
+        <div className="my-3 p-3 bg-danger text-white">
+          {error.message}
+        </div>
+      )}
     </main>
   );
 };
