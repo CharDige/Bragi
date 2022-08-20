@@ -45,6 +45,34 @@ footer {
     color: var(--light-colour)
 }
 
+/* Form styling */
+/* Element selectors */
+label {
+    color: var(--light-colour);
+    font-size: 25px;
+}
+
+/* Class selectors */
+textarea.form-input-style {
+    background-color: var(--light-colour);
+    color: var(--dark-colour);
+    font-family: var(--body-font);
+    border-radius: 0%;
+    border: none;
+    font-size: 18px;
+}
+
+.form-input-margin {
+    margin: 10px;
+}
+
+/* Pseudo styling */
+textarea.story-form-input-style:focus {
+    background-color: var(--light-colour);
+    box-shadow: none;
+    border: none;
+}
+
 /* Profile styling */
 /* Class selectors */
 .profile-details {
