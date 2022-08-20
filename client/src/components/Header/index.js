@@ -24,13 +24,13 @@ const Header = () => {
               </li>
               {Auth.loggedIn() ? (
                 <>
-                  <li className="nav-item nav-item-style">
-                    <Link className="nav-link" to="/profile">Profile</Link>
+                  <li className="nav-item">
+                    <Link className="nav-link nav-item-style" to="/profile">Profile</Link>
                   </li>
-                  <li className="nav-item nav-item-style">
-                    <button className="btn btn-lg btn-light m-2" onClick={logout}>
+                  <li className="nav-item">
+                    <p className="nav-link nav-item-style" onClick={logout}>
                       Logout
-                    </button>
+                    </p>
                   </li>
                 </>
               ) : (
