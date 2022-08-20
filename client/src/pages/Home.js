@@ -16,8 +16,10 @@ const Home = () => {
       <div className="row">
         <div className="col-12">
           {loading ? (
-            <p>Loading stories...</p>
-          ) : ( 
+            <p className='loading-text'>
+              Loading...
+            </p>
+          ) : (
             <StoryList
               stories={stories}
               showButton={false}

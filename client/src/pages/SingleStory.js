@@ -28,7 +28,9 @@ const SingleStory = () => {
     const story = data?.story || {};
 
     if (loading) {
-        return <p>Loading...</p>
+        <p className='loading-text'>
+            Loading...
+        </p>
     }
 
     return (

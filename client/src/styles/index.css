@@ -102,6 +102,11 @@ a.login-signup-link {
     font-weight: bolder;
 }
 
+.loading-text {
+    color: var(--light-colour);
+    font-size: 20px;
+}
+
 /* Pseudo styling */
 textarea.story-form-input-style:focus {
     background-color: var(--light-colour);

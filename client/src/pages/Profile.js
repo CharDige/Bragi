@@ -24,9 +24,9 @@ const Profile = () => {
 
     if (loading) {
         return (
-            <>
+            <p className='loading-text'>
                 Loading...
-            </>
+            </p>
         )
     }
 
