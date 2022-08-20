@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Nav from 'react-bootstrap/Nav';
+import '../../styles/header.css'
 
 import Auth from '../../utils/auth';
 
@@ -11,23 +11,23 @@ const Header = () => {
   };
   return (
     <header>
-      <nav className="navbar navbar-expand-lg bg-light">
+      <nav className="navbar navbar-expand-lg nav-colour">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">Bragi</Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+          <Link className="navbar-brand brand-style" to="/">Bragi</Link>
+          <button className="navbar-toggler nav-button-style" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span>Menu</span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul className="nav column-style">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Explore stories</Link>
+                <Link className="nav-link nav-item-style" to="/">Explore stories</Link>
               </li>
               {Auth.loggedIn() ? (
                 <>
-                  <li className="nav-item">
+                  <li className="nav-item nav-item-style">
                     <Link className="nav-link" to="/profile">Profile</Link>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item nav-item-style">
                     <button className="btn btn-lg btn-light m-2" onClick={logout}>
                       Logout
                     </button>
@@ -36,10 +36,10 @@ const Header = () => {
               ) : (
                 <>
                   <li>
-                    <Link className="nav-link" to="/login">Login</Link>
+                    <Link className="nav-link nav-item-style" to="/login">Login</Link>
                   </li>
                   <li>
-                    <Link className="nav-link" to="/signup">Sign up</Link>
+                    <Link className="nav-link nav-item-style" to="/signup">Sign up</Link>
                   </li>
                 </>
               )}
