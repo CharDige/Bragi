@@ -56,7 +56,7 @@ const SingleStory = () => {
                     </div>
 
                     <div className='col-12 col-lg-10 mb-3 p-3'>
-                        <CommentForm />
+                        <CommentForm storyId={story._id}/>
                     </div>
                 </div>
             ) : (
