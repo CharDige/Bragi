@@ -47,6 +47,9 @@ const StoryList = ({
                                 to={`/stories/${story._id}`}
                             >
                                 {story.storyTitle}
+                            </Link> by{' '}
+                            <Link to={`/profiles/${story.storyAuthor}`}>
+                                {story.storyAuthor}
                             </Link>
                         </h4>
                         <div className="card-body p-2">
