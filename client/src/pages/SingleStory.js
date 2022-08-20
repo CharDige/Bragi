@@ -50,7 +50,9 @@ const SingleStory = () => {
                     </div>
 
                     <div className='col-12 col-lg-10 mb-5'>
-                        <CommentList />
+                        <CommentList 
+                        comments={story.comments}
+                        />
                     </div>
 
                     <div className='col-12 col-lg-10 mb-3 p-3'>
