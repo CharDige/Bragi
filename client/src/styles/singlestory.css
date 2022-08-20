@@ -21,7 +21,7 @@ a.profile-link {
 .single-story-card-body {
     padding: 20px;
     color: var(--light-colour);
-    border-bottom: solid 2px var(--orange);
+    border-bottom: solid 2px var(--light-colour);
 }
 
 .single-story-content {
