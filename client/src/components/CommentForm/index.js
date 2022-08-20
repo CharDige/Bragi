@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
+import '../../styles/comment.css'
 
 // Import mutations
 import { ADD_COMMENT } from '../../utils/mutations';
@@ -42,17 +43,17 @@ const CommentForm = ({ storyId }) => {
     return (
         <div>
             {Auth.loggedIn() ? (
-                <div>
+                <div className='comment-form-margin'>
                     <h3 className='comment-heading'>
                         Like the story? Leave a comment
                     </h3>
                     <form className="flex-row justify-center justify-space-between-md align-center" onSubmit={handleFormSubmit}>
-                        <div className='col-12 col-lg-9'>
+                        <div className='col-12'>
                             <textarea name="commentText" placeholder='Add your comment' value={commentText} className="form-control input-style form-input-style" onChange={handleInputChange} rows="3"></textarea>
                         </div>
 
                         <div className='col-12'>
-                            <button className="btn btn-style" type="submit">
+                            <button className="btn add-comment-btn-style" type="submit">
                                 Add comment
                             </button>
                         </div>

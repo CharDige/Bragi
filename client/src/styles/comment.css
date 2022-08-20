@@ -4,6 +4,10 @@
     color: var(--orange);
 }
 
+.comment-form-margin {
+    margin: 0 20px;
+}
+
 .comment-section {
     padding: 20px;
 }
@@ -21,6 +25,17 @@
     padding: 15px 0;
     border-top: solid 2px var(--light-colour);
     border-bottom: solid 2px var(--light-colour);
+}
+button.add-comment-btn-style {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: var(--dark-red);
+    color: var(--light-colour);
+    border-radius: 0 !important;
+    border: none;
+    width: 40%;
+    font-size: 18px;
+    font-family: var(--body-font);
 }
 
 a.comment-author-style {
