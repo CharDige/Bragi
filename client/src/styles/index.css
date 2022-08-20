@@ -42,6 +42,11 @@ h3 {
     font-size: 35px !important;
 }
 
+footer {
+    background-color: var(--dark-colour);
+    color: var(--light-colour)
+}
+
 /* Profile styling */
 /* Class selectors */
 .profile-details {
