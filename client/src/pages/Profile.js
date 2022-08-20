@@ -12,7 +12,7 @@ import Auth from '../utils/auth';
 
 const Profile = () => {
     const { username: userParam } = useParams();
-    const {loading, data} = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+    const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
         variables: { username: userParam },
     });
 
@@ -39,27 +39,51 @@ const Profile = () => {
     }
 
     return (
-        <div>
-            <div className="flex-row justify-center mb-3">
-                <h2 className="col-12 col-lg-10">
-                    {userParam ? `${user.username}` : 'You'}
-                </h2>
+        <main>
+            <div>
+                <div className="row justify-center mb-3">
+                    <div className='col-12 col-lg-3'>
+                        <h2>
+                            {userParam ? `${user.username}` : 'Your profile'}
+                        </h2>
 
-                <div className="col-12 col-lg-10 mb-5">
-                    <StoryList
-                        stories={user.stories}
-                        showUsername={false}
-                        showButton={!userParam}
-                    />
-                </div>
+                        <h3>
+                            Preferred channel
+                        </h3>
+                        <p className='profile-details'>
+                            {user.channel}
+                        </p>
 
-                {!userParam && (
-                    <div className="col-12 col-lg-10 mb-3 p-3">
-                        <StoryForm />
+                        <h3>
+                            Preferred genre
+                        </h3>
+                        <p className='profile-details'>
+                            {user.genre}
+                        </p>
                     </div>
-                )}
+
+                    <div className='col-12 col-lg-9'>
+                        <h2>
+                            Stories published
+                        </h2>
+
+                        <div>
+                            <StoryList
+                                stories={user.stories}
+                                showUsername={false}
+                                showButton={!userParam}
+                            />
+                        </div>
+
+                        {!userParam && (
+                            <div className="col-12 col-lg-10 mb-3 p-3">
+                                <StoryForm />
+                            </div>
+                        )}
+                    </div>
+                </div>
             </div>
-        </div>
+        </main>
     );
 };
 
