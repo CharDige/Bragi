@@ -62,8 +62,33 @@ textarea.form-input-style {
     font-size: 18px;
 }
 
+input.form-input-style {
+    background-color: var(--light-colour);
+    color: var(--dark-colour);
+    font-family: var(--body-font);
+    border-radius: 0%;
+    border: none;
+    font-size: 18px;
+}
+
 .form-input-margin {
     margin: 10px;
+}
+
+.login-signup-form-style {
+    margin: 10px 200px;
+}
+
+button.login-signup-btn-style {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--dark-red);
+    color: var(--light-colour);
+    border-radius: 0 !important;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    font-family: var(--body-font);
 }
 
 /* Pseudo styling */
@@ -71,6 +96,17 @@ textarea.story-form-input-style:focus {
     background-color: var(--light-colour);
     box-shadow: none;
     border: none;
+}
+
+input.form-input-style:focus {
+    background-color: var(--light-colour);
+    box-shadow: none;
+    border: none;
+}
+
+button.login-signup-btn-style:hover {
+    background-color: var(--green);
+    color: var(--light-colour);
 }
 
 /* Profile styling */
@@ -85,5 +121,9 @@ textarea.story-form-input-style:focus {
 @media screen and (max-width: 991px) {
     .column-style {
         flex-direction: column;
+    }
+
+    .login-signup-form-style {
+        margin: 10px;
     }
 }
