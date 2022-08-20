@@ -37,7 +37,19 @@ a.comment-author-style {
     margin-top: 10px;
 }
 
+button.remove-comment-btn-style {
+    color: var(--orange);
+    font-weight: bolder;
+    border: none;
+}
+
 /* Pseudo selectors */
 a.comment-author-style:hover {
     color: var(--green);
+}
+
+button.remove-comment-btn-style:hover {
+    color: var(--green);
+    border: none;
+    box-shadow: none;
 }
