@@ -15,6 +15,22 @@
     color: var(--light-colour);
 }
 
+main {
+    margin: 40px;
+}
+
 body {
     background-color: var(--dark-colour) !important;
+}
+
+/* Story list styling */
+h3 {
+    color: var(--orange);
+}
+
+/* Media queries for responsive web application for phones and tablets */
+@media screen and (max-width: 991px) {
+    .column-style {
+        flex-direction: column;
+    }
 }
