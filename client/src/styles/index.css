@@ -9,11 +9,13 @@
     --body-font: 'Poppins', sans-serif;
 }
 
-/* Highlight colour and body background */
+/* Highlight colour */
 ::selection {
     background-color: var(--dark-red);
     color: var(--light-colour);
 }
+
+/* Element selectors across application */
 
 main {
     margin: 40px;
@@ -23,10 +25,31 @@ body {
     background-color: var(--dark-colour) !important;
 }
 
-/* Story list styling */
-h3 {
-    color: var(--orange);
+p {
+    font-family: var(--body-font);
 }
+
+/* Element selectors */
+
+h2 {
+    color: var(--orange);
+    font-family: var(--heading-font);
+    font-size: 50px !important;
+}
+
+h3 {
+    color: var(--green);
+    font-family: var(--heading-font);
+    font-size: 35px !important;
+}
+
+/* Class selectors */
+
+.profile-details {
+    font-size: 20px;
+    color: var(--light-colour);
+}
+
 
 /* Media queries for responsive web application for phones and tablets */
 @media screen and (max-width: 991px) {
