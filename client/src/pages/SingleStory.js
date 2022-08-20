@@ -15,6 +15,9 @@ import { useQuery } from '@apollo/client';
 // Import queries
 import { QUERY_SINGLE_STORY } from '../utils/queries';
 
+// Import Auth
+import Auth from '../utils/auth';
+
 const SingleStory = () => {
     const { storyId } = useParams();
 
@@ -30,27 +33,35 @@ const SingleStory = () => {
 
     return (
         <main>
-            <div className="single-story-style">
-                <div className="single-story-card-header">
-                    <h2 className='single-story-title-style'>
-                        {story.storyTitle} by <Link to={`/profiles/${story.storyAuthor}`} className="profile-link">{story.storyAuthor}</Link>
-                    </h2>
-                    <p className='single-story-created-at'>Published on {story.createdAt}</p>
-                </div>
-                <div className='single-story-card-body'>
-                    <p className="single-story-content">
-                        {story.storyContent}
-                    </p>
-                </div>
+            {Auth.loggedIn() ? (
+                <div className="single-story-style">
+                    <div className="single-story-card-header">
+                        <h2 className='single-story-title-style'>
+                            {story.storyTitle} by <Link to={`/profiles/${story.storyAuthor}`} className="profile-link">{story.storyAuthor}</Link>
+                        </h2>
+                        <p className='single-story-created-at'>Published on {story.createdAt}</p>
+                    </div>
+                    <div className='single-story-card-body'>
+                        <p className="single-story-content">
+                            {story.storyContent}
+                        </p>
+                    </div>
 
-                <div className='col-12 col-lg-10 mb-5'>
-                    <CommentList />
-                </div>
+                    <div className='col-12 col-lg-10 mb-5'>
+                        <CommentList />
+                    </div>
 
-                <div className='col-12 col-lg-10 mb-3 p-3'>
-                    <CommentForm />
+                    <div className='col-12 col-lg-10 mb-3 p-3'>
+                        <CommentForm />
+                    </div>
                 </div>
-            </div>
+            ) : (
+                <p className='error-message'>
+                    Whoops! You need to be logged in to look at stories. Please{' '}
+                    <Link to="/login" className='login-signup-link'>login</Link> or <Link to="/signup" className='login-signup-link'>signup.</Link>
+                </p>
+            )}
+
         </main>
     );
 };
