@@ -49,7 +49,7 @@ const SingleStory = () => {
                         </p>
                     </div>
 
-                    <div className='col-12 col-lg-10 mb-5'>
+                    <div className='col-12'>
                         <CommentList 
                         comments={story.comments}
                         />
