@@ -21,6 +21,7 @@ a.nav-item-style {
     color: var(--orange);
     font-family: var(--heading-font);
     font-size: 35px;
+    padding-left: 20px;
 }
 
 /* Pseudo-styling in header */
@@ -43,11 +44,4 @@ a.nav-item-style:focus {
 .navbar-toggler.nav-button-style:focus {
     color: var(--green);
     box-shadow: none;
-}
-
-/* Media queries for responsive web application for phones and tablets */
-@media screen and (max-width: 991px) {
-    .column-style {
-        flex-direction: column;
-    }
 }
