@@ -11,6 +11,7 @@ import { REMOVE_STORY } from '../../utils/mutations';
 const StoryList = ({
     stories,
     showUsername = true,
+    showButton
 }) => {
     const [removeStory] = useMutation(REMOVE_STORY)
 
@@ -68,9 +69,13 @@ const StoryList = ({
                         >
                             Read more
                         </Link>
-                        <button className='btn' onClick={() => handleDeleteStory(story._id)}>
-                            Remove story
-                        </button>
+                        {showButton ? (
+                            <button className='btn' onClick={() => handleDeleteStory(story._id)}>
+                                Remove story
+                            </button>
+                        ) : (
+                            <span></span>
+                        )}
                     </div>
                 ))}
         </div>
