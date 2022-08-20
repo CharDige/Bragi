@@ -9,7 +9,8 @@ import Auth from '../../utils/auth';
 import { REMOVE_STORY } from '../../utils/mutations';
 
 const StoryList = ({
-    stories
+    stories,
+    showUsername = true,
 }) => {
     const [removeStory] = useMutation(REMOVE_STORY)
 
@@ -22,7 +23,7 @@ const StoryList = ({
 
         try {
             const { data } = await removeStory({
-                variables: {storyId}
+                variables: { storyId }
             });
             window.location.reload();
         } catch (error) {
@@ -47,10 +48,14 @@ const StoryList = ({
                                 to={`/stories/${story._id}`}
                             >
                                 {story.storyTitle}
-                            </Link> by{' '}
-                            <Link to={`/profiles/${story.storyAuthor}`}>
-                                {story.storyAuthor}
                             </Link>
+                            {showUsername ? (
+                                <span>{' '}by <Link to={`/profiles/${story.storyAuthor}`}>
+                                    {story.storyAuthor}
+                                </Link></span>
+                            ) : (
+                                <span></span>
+                            )}
                         </h4>
                         <div className="card-body p-2">
                             <p>
