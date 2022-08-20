@@ -91,6 +91,17 @@ button.login-signup-btn-style {
     font-family: var(--body-font);
 }
 
+.error-message {
+    color: var(--light-colour);
+    font-size: 20px;
+}
+
+a.login-signup-link {
+    color: var(--orange);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
 /* Pseudo styling */
 textarea.story-form-input-style:focus {
     background-color: var(--light-colour);
@@ -107,6 +118,10 @@ input.form-input-style:focus {
 button.login-signup-btn-style:hover {
     background-color: var(--green);
     color: var(--light-colour);
+}
+
+a.login-signup-link:hover {
+    color: var(--green);
 }
 
 /* Profile styling */
