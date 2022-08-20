@@ -1,0 +1,20 @@
+/* Main colours, formatting and styling repeated through main sections of the application */
+:root {
+    --dark-colour: #1A180F;
+    --light-colour: #F5EAE0;
+    --orange: #E2711D;
+    --dark-red: #8C1C18;
+    --green: #50723C;
+    --heading-font: 'Unica One', cursive; 
+    --body-font: 'Poppins', sans-serif;
+}
+
+/* Highlight colour and body background */
+::selection {
+    background-color: var(--dark-red);
+    color: var(--light-colour);
+}
+
+body {
+    background-color: var(--dark-colour) !important;
+}
