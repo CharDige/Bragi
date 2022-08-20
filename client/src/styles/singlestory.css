@@ -1,0 +1,35 @@
+/* Class selectors */
+.single-story-card-header {
+    background-color: var(--light-colour);
+    padding: 20px;
+}
+
+.single-story-title-style {
+    margin: 10px;
+}
+
+.single-story-created-at {
+    margin: 10px;
+}
+
+a.profile-link {
+    color: var(--dark-red);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.single-story-card-body {
+    padding: 20px;
+    color: var(--light-colour);
+    border-bottom: solid 2px var(--orange);
+}
+
+.single-story-content {
+    margin: 10px;
+}
+
+/* Pseudo styles */
+a.profile-link:hover {
+    color: var(--green);
+    text-decoration: none;
+}
