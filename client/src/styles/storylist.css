@@ -1,0 +1,68 @@
+/* Class selectors */
+.card-styling {
+    background-color: var(--light-colour);
+    margin-bottom: 35px;
+    border: solid 2px var(--dark-colour)
+}
+
+.story-card-header {
+    color: var(--dark-colour);
+    padding: 10px 15px 5px 15px;
+    border-bottom: solid 2px var(--orange);
+}
+
+.h3-extra-colour {
+    color: var(--dark-colour);
+}
+
+.story-card-body {
+    color: var(--dark-colour);
+    padding: 10px 15px 10px 15px;
+}
+
+a.story-title-style {
+    color: var(--dark-red);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.created-date {
+    padding-bottom: 5px;
+    margin-bottom: 0;
+}
+
+a.btn-style {
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--dark-red);
+    color: var(--light-colour);
+    border-radius: 0 !important;
+    border: none;
+    width: 40%;
+}
+
+button.btn-style {
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--dark-red);
+    color: var(--light-colour);
+    border-radius: 0 !important;
+    border: none;
+    width: 40%;
+}
+
+/* Pseudo styling */
+a.story-title-style:hover {
+    color: var(--green);
+    text-decoration: none;
+}
+
+a.btn-style:hover {
+    background-color: var(--green);
+    color: var(--light-colour);
+}
+
+button.btn-style:hover {
+    background-color: var(--green);
+    color: var(--light-colour);
+}
