@@ -11,7 +11,7 @@ import { REMOVE_COMMENT } from '../../utils/mutations';
 
 const CommentList = ({
     comments = [],
-    storyId
+    storyId,
 }) => {
     const [removeComment] = useMutation(REMOVE_COMMENT)
 
@@ -56,9 +56,13 @@ const CommentList = ({
                                     {comment.commentText}
                                 </p>
                             </div>
-                            <button className='btn btn-style' onClick={() => handleDeleteComment(storyId, comment._id)}>
-                                Delete comment
-                            </button>
+                            {Auth.getProfile().data.username === comment.commentAuthor ? (
+                                <button className='btn remove-comment-btn-style' onClick={() => handleDeleteComment(storyId, comment._id)}>
+                                    Delete comment
+                                </button>
+                            ) : (
+                                <span></span>
+                            )}
                         </div>
                     ))}
             </div>
