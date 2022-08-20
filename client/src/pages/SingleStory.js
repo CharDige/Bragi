@@ -27,27 +27,29 @@ const SingleStory = () => {
     }
 
     return (
-        <div className="my-3">
-            <div className="card-header p-2 m-0">
-                <h2>
-                    {story.storyTitle} by {story.storyAuthor}
-                </h2>
-                <p>Published on {story.createdAt}</p>
-            </div>
-            <div className='card-body'>
-                <p>
-                    {story.storyContent}
-                </p>
-            </div>
+        <main>
+            <div className="my-3">
+                <div className="card-header p-2 m-0">
+                    <h2>
+                        {story.storyTitle} by {story.storyAuthor}
+                    </h2>
+                    <p>Published on {story.createdAt}</p>
+                </div>
+                <div className='card-body'>
+                    <p>
+                        {story.storyContent}
+                    </p>
+                </div>
 
-            <div className='col-12 col-lg-10 mb-5'>
-                <CommentList />
-            </div>
+                <div className='col-12 col-lg-10 mb-5'>
+                    <CommentList />
+                </div>
 
-            <div className='col-12 col-lg-10 mb-3 p-3'>
-                <CommentForm />
+                <div className='col-12 col-lg-10 mb-3 p-3'>
+                    <CommentForm />
+                </div>
             </div>
-        </div>
+        </main>
     );
 };
 
