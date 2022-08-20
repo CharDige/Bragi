@@ -52,6 +52,7 @@ const SingleStory = () => {
                     <div className='col-12'>
                         <CommentList 
                         comments={story.comments}
+                        storyId={story._id}
                         />
                     </div>
 
