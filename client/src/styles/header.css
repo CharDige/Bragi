@@ -17,6 +17,13 @@ a.nav-item-style {
     padding: 10px 20px;
 }
 
+p.nav-item-style {
+    color: var(--orange);
+    font-family: var(--heading-font);
+    font-size: 35px;
+    padding: 10px 20px;
+}
+
 .navbar-toggler.nav-button-style {
     color: var(--orange);
     font-family: var(--heading-font);
@@ -38,6 +45,15 @@ a.nav-item-style:hover {
 }
 
 a.nav-item-style:focus {
+    color: var(--green);
+}
+
+p.nav-item-style:hover {
+    color: var(--green);
+    cursor: pointer;
+}
+
+p.nav-item-style:focus {
     color: var(--green);
 }
 
