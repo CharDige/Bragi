@@ -39,6 +39,8 @@ a.btn-style {
     border-radius: 0 !important;
     border: none;
     width: 40%;
+    font-size: 18px;
+    font-family: var(--body-font);
 }
 
 button.btn-style {
@@ -49,6 +51,8 @@ button.btn-style {
     border-radius: 0 !important;
     border: none;
     width: 40%;
+    font-size: 18px;
+    font-family: var(--body-font);
 }
 
 /* Pseudo styling */
