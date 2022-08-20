@@ -48,6 +48,7 @@ const Profile = () => {
                 <div className="col-12 col-lg-10 mb-5">
                     <StoryList
                         stories={user.stories}
+                        showUsername={false}
                     />
                 </div>
 
