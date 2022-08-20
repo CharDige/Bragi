@@ -20,6 +20,7 @@ const Home = () => {
           ) : (
             <StoryList
               stories={stories}
+              showButton={false}
             />
           )}
         </div>

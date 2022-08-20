@@ -49,6 +49,7 @@ const Profile = () => {
                     <StoryList
                         stories={user.stories}
                         showUsername={false}
+                        showButton={!userParam}
                     />
                 </div>
 
