@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const CommentList = ({ comments = [] }) => {
+const CommentList = ({
+    comments = []
+}) => {
+
     if (!comments.length) {
         return <p>No comments yet!</p>
     }
@@ -12,10 +16,13 @@ const CommentList = ({ comments = [] }) => {
             </h3>
             <div className='flex-row my-4'>
                 {comments &&
-                    comments.map((comment) => {
-                        <div key={comment._id} className="col-12 mb-3 pb-3">
-                            <div className='card-header'>
-                                <p>{comment.commentAuthor} commented on {comment.createdAt}</p>
+                    comments.map((comment) => (
+                        <div key={comment._id} className="col-12">
+                            <div className='comment-card-header'>
+                                <p>
+                                    <Link to={`/profiles/${comment.commentAuthor}`}>
+                                    {comment.commentAuthor}
+                                    </Link> commented on {comment.createdAt}</p>
                             </div>
                             <div className='card-body'>
                                 <p>
@@ -23,7 +30,7 @@ const CommentList = ({ comments = [] }) => {
                                 </p>
                             </div>
                         </div>
-                    })}
+                    ))}
             </div>
         </>
     );
