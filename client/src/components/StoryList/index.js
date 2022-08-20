@@ -38,46 +38,48 @@ const StoryList = ({
 
     return (
         <div>
-            <h3>
-                Stories published
-            </h3>
-            {stories &&
-                stories.map((story) => (
-                    <div key={story._id} className="card mb-3">
-                        <h4 className="card-header p-2 m-0">
-                            <Link
-                                to={`/stories/${story._id}`}
-                            >
-                                {story.storyTitle}
-                            </Link>
-                            {showUsername ? (
-                                <span>{' '}by <Link to={`/profiles/${story.storyAuthor}`}>
-                                    {story.storyAuthor}
-                                </Link></span>
-                            ) : (
-                                <span></span>
-                            )}
-                        </h4>
-                        <div className="card-body p-2">
-                            <p>
-                                {story.storyDescription}
-                            </p>
-                        </div>
-                        <Link
-                            className="btn"
-                            to={`/stories/${story._id}`}
-                        >
-                            Read more
-                        </Link>
-                        {showButton ? (
-                            <button className='btn' onClick={() => handleDeleteStory(story._id)}>
-                                Remove story
-                            </button>
-                        ) : (
-                            <span></span>
-                        )}
-                    </div>
-                ))}
+            <div className='row'>
+                    {stories &&
+                        stories.map((story) => (
+                            <div key={story._id} className="col-12 col-lg-6">
+                                <div className="card mb-3">
+                                    <h4 className="card-header p-2 m-0">
+                                        <Link
+                                            to={`/stories/${story._id}`}
+                                        >
+                                            {story.storyTitle}
+                                        </Link>
+                                        {showUsername ? (
+                                            <span>{' '}by <Link to={`/profiles/${story.storyAuthor}`}>
+                                                {story.storyAuthor}
+                                            </Link></span>
+                                        ) : (
+                                            <span></span>
+                                        )}
+                                    </h4>
+                                    <div className="card-body p-2">
+                                        <p>
+                                            {story.storyDescription}
+                                        </p>
+                                    </div>
+                                    <Link
+                                        className="btn"
+                                        to={`/stories/${story._id}`}
+                                    >
+                                        Read more
+                                    </Link>
+                                    {showButton ? (
+                                        <button className='btn' onClick={() => handleDeleteStory(story._id)}>
+                                            Remove story
+                                        </button>
+                                    ) : (
+                                        <span></span>
+                                    )}
+                                </div>
+
+                            </div>
+                        ))}
+            </div>
         </div>
     );
 };
