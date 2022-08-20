@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/singlestory.css';
 
 // Import useParams()
 import { useParams } from 'react-router-dom';
@@ -28,15 +30,15 @@ const SingleStory = () => {
 
     return (
         <main>
-            <div className="my-3">
-                <div className="card-header p-2 m-0">
-                    <h2>
-                        {story.storyTitle} by {story.storyAuthor}
+            <div className="single-story-style">
+                <div className="single-story-card-header">
+                    <h2 className='single-story-title-style'>
+                        {story.storyTitle} by <Link to={`/profiles/${story.storyAuthor}`} className="profile-link">{story.storyAuthor}</Link>
                     </h2>
-                    <p>Published on {story.createdAt}</p>
+                    <p className='single-story-created-at'>Published on {story.createdAt}</p>
                 </div>
-                <div className='card-body'>
-                    <p>
+                <div className='single-story-card-body'>
+                    <p className="single-story-content">
                         {story.storyContent}
                     </p>
                 </div>
