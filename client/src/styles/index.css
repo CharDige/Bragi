@@ -113,7 +113,7 @@ a.login-signup-link {
 }
 
 /* Pseudo styling */
-textarea.story-form-input-style:focus {
+textarea.form-input-style:focus {
     background-color: var(--light-colour);
     box-shadow: none;
     border: none;

@@ -41,19 +41,18 @@ const CommentForm = ({ storyId }) => {
 
     return (
         <div>
-            <p>
-                Comment
-            </p>
-
             {Auth.loggedIn() ? (
-                <>
+                <div>
+                    <h3 className='comment-heading'>
+                        Like the story? Leave a comment
+                    </h3>
                     <form className="flex-row justify-center justify-space-between-md align-center" onSubmit={handleFormSubmit}>
                         <div className='col-12 col-lg-9'>
-                            <textarea name="commentText" placeholder='Add your comment' value={commentText} className="form-input w-100" onChange={handleInputChange}></textarea>
+                            <textarea name="commentText" placeholder='Add your comment' value={commentText} className="form-control input-style form-input-style" onChange={handleInputChange} rows="3"></textarea>
                         </div>
 
-                        <div className='col-12 col-lg-3'>
-                            <button className="btn" type="submit">
+                        <div className='col-12'>
+                            <button className="btn btn-style" type="submit">
                                 Add comment
                             </button>
                         </div>
@@ -63,11 +62,11 @@ const CommentForm = ({ storyId }) => {
                             </div>
                         )}
                     </form>
-                </>
+                </div>
             ) : (
-                <p>
-                    You need to be logged in to look at stories. Please{' '}
-                    <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+                <p className='error-message'>
+                    Whoops! You need to be logged in to look add a comment. Please{' '}
+                    <Link to="/login" className='login-signup-link'>login</Link> or <Link to="/signup" className='login-signup-link'>signup.</Link>
                 </p>
             )}
         </div>
