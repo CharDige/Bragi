@@ -13,7 +13,7 @@ const Header = () => {
     <header>
       <nav className="navbar navbar-expand-lg nav-colour">
         <div className="container-fluid">
-          <Link className="navbar-brand brand-style" to="/">Bragi</Link>
+          <Link className="navbar-brand brand-style" to="/"><h1>Bragi</h1></Link>
           <button className="navbar-toggler nav-button-style" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span>Menu</span>
           </button>
