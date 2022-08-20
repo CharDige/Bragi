@@ -1,0 +1,43 @@
+/* Class selectors */
+.comment-heading {
+    margin-top: 20px;
+    color: var(--orange);
+}
+
+.comment-section {
+    padding: 20px;
+}
+
+.comment-author-createdat {
+    color: var(--light-colour);
+    font-size: 20px;
+}
+
+.comment-text {
+    color: var(--light-colour);
+}
+
+.comment-border {
+    padding: 15px 0;
+    border-top: solid 2px var(--light-colour);
+    border-bottom: solid 2px var(--light-colour);
+}
+
+a.comment-author-style {
+    color: var(--orange);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.comment-card-header {
+    margin-top: 10px;
+}
+
+.comment-card-body {
+    margin-top: 10px;
+}
+
+/* Pseudo selectors */
+a.comment-author-style:hover {
+    color: var(--green);
+}
