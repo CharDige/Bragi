@@ -51,6 +51,9 @@ const Login = (props) => {
         </div>
       ) : (
         <div className="login-signup-form-style">
+          <h2 className='login-signup-heading'>
+            Return to your stories
+          </h2>
           <form onSubmit={handleFormSubmit}>
             <div className="mb-3">
               <label className="form-label">Email</label>
