@@ -10,29 +10,29 @@ const CommentList = ({
     }
 
     return (
-        <>
-            <h3>
+        <div className='comment-section'>
+            <h3 className='comment-heading'>
                 Comments
             </h3>
             <div className='flex-row my-4'>
                 {comments &&
                     comments.map((comment) => (
-                        <div key={comment._id} className="col-12">
+                        <div key={comment._id} className="comment-border">
                             <div className='comment-card-header'>
-                                <p>
-                                    <Link to={`/profiles/${comment.commentAuthor}`}>
+                                <p className='comment-author-createdat'>
+                                    <Link to={`/profiles/${comment.commentAuthor}`} className="comment-author-style">
                                     {comment.commentAuthor}
                                     </Link> commented on {comment.createdAt}</p>
                             </div>
-                            <div className='card-body'>
-                                <p>
+                            <div className='comment-card-body'>
+                                <p className='comment-text'>
                                     {comment.commentText}
                                 </p>
                             </div>
                         </div>
                     ))}
             </div>
-        </>
+        </div>
     );
 };
 
