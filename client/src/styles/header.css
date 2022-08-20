@@ -1,0 +1,53 @@
+/* Header styling */
+.nav-colour {
+    background-color: var(--dark-colour);
+}
+
+a.brand-style {
+    color: var(--orange);
+    font-family: var(--heading-font);
+    font-size: 70px;
+    padding-left: 20px;
+}
+
+a.nav-item-style {
+    color: var(--orange);
+    font-family: var(--heading-font);
+    font-size: 35px;
+    padding: 10px 20px;
+}
+
+.navbar-toggler.nav-button-style {
+    color: var(--orange);
+    font-family: var(--heading-font);
+    font-size: 35px;
+}
+
+/* Pseudo-styling in header */
+a.brand-style:focus {
+    color: var(--orange);
+}
+
+a.brand-style:hover {
+    color: var(--green);
+}
+
+a.nav-item-style:hover {
+    color: var(--green);
+}
+
+a.nav-item-style:focus {
+    color: var(--green);
+}
+
+.navbar-toggler.nav-button-style:focus {
+    color: var(--green);
+    box-shadow: none;
+}
+
+/* Media queries for responsive web application for phones and tablets */
+@media screen and (max-width: 991px) {
+    .column-style {
+        flex-direction: column;
+    }
+}
