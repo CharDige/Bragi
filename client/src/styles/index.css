@@ -96,6 +96,11 @@ button.login-signup-btn-style {
     font-size: 20px;
 }
 
+.success-message {
+    color: var(--light-colour);
+    font-size: 20px;
+};
+
 a.login-signup-link {
     color: var(--orange);
     text-decoration: none;

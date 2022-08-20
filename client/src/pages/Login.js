@@ -43,12 +43,10 @@ const Login = (props) => {
   return (
     <main>
       {data ? (
-        <div className='success-message'>
-          <p>
-            Success! You may now head{' '}
-            <Link to="/">back to the homepage.</Link>
-          </p>
-        </div>
+        <p className='success-message'>
+          Success! You may now head{' '}
+          <Link to="/" className='login-signup-link'>back to the homepage.</Link>
+        </p>
       ) : (
         <div className="login-signup-form-style">
           <h2 className='login-signup-heading'>
