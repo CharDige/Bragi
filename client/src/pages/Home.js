@@ -13,11 +13,11 @@ const Home = () => {
 
   return (
     <main>
-      <div className="flex-row justify-center">
-        <div className="col-12 col-lg-10 mb-3 p-3">
+      <div className="row">
+        <div className="col-12">
           {loading ? (
             <p>Loading stories...</p>
-          ) : (
+          ) : ( 
             <StoryList
               stories={stories}
               showButton={false}
