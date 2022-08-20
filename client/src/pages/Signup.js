@@ -11,6 +11,8 @@ const Signup = () => {
     username: '',
     email: '',
     password: '',
+    channel: '',
+    genre: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
@@ -73,6 +75,20 @@ const Signup = () => {
                   name="password"
                   type="password"
                   value={formState.password}
+                  onChange={handleChange}
+                />
+                <textarea
+                  className="form-input"
+                  placeholder="Your favourite channel for stories i.e. Books, Films, Poetry, Video games..."
+                  name="channel"
+                  value={formState.channel}
+                  onChange={handleChange}
+                />
+                <textarea
+                  className="form-input"
+                  placeholder="Your favourite genre of stories i.e. Fantasy, Romance, Action, Satire, etc."
+                  name="genre"
+                  value={formState.genre}
                   onChange={handleChange}
                 />
                 <button
