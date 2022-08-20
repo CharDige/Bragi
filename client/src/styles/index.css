@@ -28,8 +28,6 @@ p {
     font-family: var(--body-font);
 }
 
-/* Element selectors */
-
 h2 {
     color: var(--orange);
     font-family: var(--heading-font);
