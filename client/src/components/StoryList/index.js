@@ -61,7 +61,8 @@ const StoryList = ({
                                             <span></span>
                                         )}
                                     </h3>
-                                    <p className='created-date'>{' '}created on {story.createdAt}</p>
+                                    <p className='created-date'>{' '}Created on {story.createdAt}</p>
+                                    <p>Channel: <span className='story-details'>{story.storyChannel}</span> | Genre: <span className='story-details'>{story.storyGenre}</span></p>
                                 </div>
 
                                 <div className="story-card-body">

@@ -42,6 +42,7 @@ const SingleStory = () => {
                             {story.storyTitle} by <Link to={`/profiles/${story.storyAuthor}`} className="profile-link">{story.storyAuthor}</Link>
                         </h2>
                         <p className='single-story-created-at'>Published on {story.createdAt}</p>
+                        <p className='single-story-created-at'>Channel: <span className='story-details'>{story.storyChannel}</span> | Genre: <span className='story-details'>{story.storyGenre}</span></p>
                     </div>
                     <div className='single-story-card-body'>
                         <p className="single-story-content">
