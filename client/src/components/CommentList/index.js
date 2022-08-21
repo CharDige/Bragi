@@ -33,7 +33,7 @@ const CommentList = ({
     }
 
     if (!comments.length) {
-        return <p>No comments yet!</p>
+        return <p className='no-data'>No comments yet!</p>
     }
 
     return (

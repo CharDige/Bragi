@@ -34,7 +34,7 @@ const StoryList = ({
     }
 
     if (!stories.length) {
-        return <p>No stories yet!</p>
+        return <p className='no-data'>No stories yet!</p>
     }
 
     return (

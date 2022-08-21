@@ -112,6 +112,10 @@ a.login-signup-link {
     font-size: 20px;
 }
 
+p.no-data {
+    color: var(--light-colour);
+}
+
 /* Pseudo styling */
 textarea.form-input-style:focus {
     background-color: var(--light-colour);
