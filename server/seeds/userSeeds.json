@@ -1,30 +1,58 @@
 [
   {
-    "username": "elliot",
-    "email": "elliot@email.com",
+    "username": "Cousland",
+    "email": "cousland@email.com",
     "password": "password01",
     "channel": "Books",
     "genre": "Action"
   },
   {
-    "username": "dory",
-    "email": "dory@email.com",
+    "username": "Amell",
+    "email": "amell@email.com",
     "password": "password01",
     "channel": "Movies/Films",
     "genre": "Romance"
   },
   {
-    "username": "drew",
-    "email": "drew@email.com",
+    "username": "Surana",
+    "email": "surana@email.com",
     "password": "password01",
     "channel": "Poetry",
     "genre": "Comedy"
   },
   {
-    "username": "portia",
-    "email": "portia@email.com",
+    "username": "Tabris",
+    "email": "tabris@email.com",
     "password": "password01",
     "channel": "Video games",
-    "genre": "Action"
+    "genre": "General fiction"
+  },
+  {
+    "username": "Mahariel",
+    "email": "mahariel@email.com",
+    "password": "password01",
+    "channel": "Books",
+    "genre": "Satire"
+  },
+  {
+    "username": "Aeducan",
+    "email": "aeducan@email.com",
+    "password": "password01",
+    "channel": "Books",
+    "genre": "Fantasy"
+  },
+  {
+    "username": "Brosca",
+    "email": "brosca@email.com",
+    "password": "password01",
+    "channel": "Movies/Films",
+    "genre": "Comedy"
+  },
+  {
+    "username": "Hawke",
+    "email": "hawke@email.com",
+    "password": "password01",
+    "channel": "Video games",
+    "genre": "Fantasy"
   }
 ]

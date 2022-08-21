@@ -1,38 +1,138 @@
 [
     {
-        "storyTitle": "To the moon and back (?) again",
+        "storyTitle": "To the moon and back (?) again, Part One",
         "storyDescription": "An astronaut named Jerry takes a trip to the moon but when he gets there, gets in trouble and must find a way back to Earth",
         "storyContent": "Once upon a time there was a man names Jerry who loved wanted nothing more than to learn how to travel to the moon. One day, his wish came true after many years of study to become an astronaut. However, what his teachers didn't tell him as he found himself on the moon was what lay awaiting his entrance...",
-        "storyAuthor": "elliot",
+        "storyAuthor": "Cousland",
         "storyGenre": "Action",
         "storyChannel": "Books",
-        "comments": {
-            "commentText": "Oooh, I love this idea. Can't wait to read more. Are you thinking aliens?",
-            "commentAuthor": "drew"
-        }
+        "comments": [
+            {
+                "commentText": "Oooh, I love this idea. Can't wait to read more. Are you thinking aliens?",
+                "commentAuthor": "Hawke"
+            },
+            {
+                "commentText": "Yeah, I was thinking about Aliens, Hawke! However, I wonder if I can do something a bit more creative than that... Maybe aliens is too obvious? Check back for Part Two and find out!",
+                "commentAuthor": "Cousland"
+            },
+            {
+                "commentText": "I'm excited for Part Two!",
+                "commentAuthor": "Amell"
+            }
+        ]
     },
     {
         "storyTitle": "A haiku for your thoughts",
         "storyDescription": "Just a simple haiku for your thoughts",
         "storyContent": "Here's a thought for you \n A haiku can say a lot \n but what about you?",
-        "storyAuthor": "drew",
+        "storyAuthor": "Surana",
         "storyGenre": "Comedy",
         "storyChannel": "Poetry",
-        "comments": {
-            "commentText": "This is really creative! Love it!",
-            "commentAuthor": "portia"
-        }
+        "comments": [
+            {
+                "commentText": "This is really creative! Love it!",
+                "commentAuthor": "Tabris"
+            },
+            {
+                "commentText": "Thank you!",
+                "commentAuthor": "Surana"
+            }
+        ]
     },
     {
-        "storyTitle": "You've heard for Stray, but what about Domestic?",
+        "storyTitle": "You've heard of Stray, but what about Domestic?",
         "storyDescription": "A video game concept not about a stray cat, but a domestic one.",
         "storyContent": "Imagine. There's a video game out there right now that's all about a stray cat in some dystopian future. I want to play a game where I get to be a domesticated cat and can get up to mischief. So, here's my story idea: \n \n So, your a cat that lives in a loving home with one person, who has a bunch or random friends and, at times, roomates. The premise is for you to either be a good cat and bond with your owner or be a bad cat and get into mischief. However, if you get up to too much mischief, you risk getting thrown out! \n \n Why mention the roomates and friends? Well, you can also make friends with your owners friends, or terrorise the roomates. It's all about choice--kind of like the Sims but with cats! \n \n Other thoughts include making it like an open world game but the Open World is the house... or maybe the street? The sky's the limit! \n \n Oh! And you can customise your cat, so if you want to be a crazy ginger tabby, then you can, or you can be like one of those siamese cats!",
-        "storyAuthor": "portia",
-        "storyGenre": "General",
+        "storyAuthor": "Tabris",
+        "storyGenre": "General fiction",
         "storyChannel": "Video games",
-        "comments": {
-            "commentText": "What a great idea! I loved the game Stray. Combining it with something like the Sims like this sounds awesome. I'd definitely pay to fund this!",
-            "commentAuthor": "elliot"
-        }
+        "comments": [
+            {
+                "commentText": "What a great idea! I loved the game Stray. Combining it with something like the Sims like this sounds awesome. I'd definitely pay to fund this!",
+                "commentAuthor": "Hawke"
+            },
+            {
+                "commentText": "Ummm... shut up and take my money?! I would play this forever!!",
+                "commentAuthor": "Aeducan"
+            },
+            {
+                "commentText": "Thank you both. Maybe I'll start a kickstarter?",
+                "commentAuthor": "Tabris"
+            },
+            {
+                "commentText": "You'd be mad not too!",
+                "commentAuthor": "Aeducan"
+            }
+        ]
+    },
+    {
+        "storyTitle": "At dawn",
+        "storyDescription": "A short movie/film concept that focuses on the subtle moments at dawn fostering a romance between two cats",
+        "storyContent": "On the horizon, there’s a mist that glows so subtly while the moon makes its way to the other edge of the world. Paw pads light graze the ground as two cats—one ginger, the other black—slowly make their way towards two neighbouring homes. A fence—dark green in the day but only a smudge of dark grey in the dim light—is ahead of them. A fence that separates them from each other. A barrier between together—each jump over to see the other the effort worthwhile. The sky begins to shimmer to a red, just before the moment it settles to orange and then illuminates the blue of day. They stop. They look at each other. A touch of the tails and the slight purr from the orange indicates that it’s time to part ways. Black hesitates as it watches orange head towards their side of the fence. Courage flares and they quickly make their way to orange for a touch of the nose, they scurries over the fence to only be a shadow of a figure for orange. Orange waits a moment, looses a purr, and scurries over the fence as the sky turns blue for the day.",
+        "storyAuthor": "Amell",
+        "storyGenre": "Romance",
+        "storyChannel": "Movies/film",
+        "comments": [
+            {
+                "commentText": "Oh my goodness--what a cute idea of a short film! I think my heart would BURST watching this. Great one!",
+                "commentAuthor": "Brosca"
+            },
+            {
+                "commentText": "Ummm... hello?! Tears in my eyes anyone?! Brilliant. Give it an award already!",
+                "commentAuthor": "Surana"
+            }
+        ]
+    },
+    {
+        "storyTitle": "So, what happens to Merril? Part 1/100",
+        "storyDescription": "Yes, you read right—part 1/100. This is a long one, where we find out… what happened to Merril?",
+        "storyContent": "Merril is this brilliant student, right? Does really well for herself all throughout school. Is on every ‘intellectual’ group you can think of. Volunteers at charities. Walks old ladies across the road. Think of a nice thing someone can do—a random act of kindness—and I can bet you she’s done it. But everyone’s been wondering… it’s been 10 years since school—so what happened to her? We all expected her to make headlines. She was going to take on the world—probably find the cure for the rarest diseases and end world hunger all at once. Well, I can tell you what she did… she relaxed. That’s right, she decided the best thing for herself after years of hard work was to take a deep breath and not do anything. And she could—she’d been lucky enough to land herself a great casual job at a local vet—helping save puppies and kittens, as you do (and so like Merril)—which paid really well. So, she had saved up enough (outside of donating to charities) to be able to spend the last 10 years to do absolutely nothing. But those 10 years are up, and Merril feels like doing something now. So, what will it be first?",
+        "storyAuthor": "Mahariel",
+        "storyGenre": "Satire",
+        "storyChannel": "Books",
+        "comments": [
+            {
+                "commentText": "This is too relatable... But also, what does she do next?! I can't wait to see what happens in Part 2!",
+                "commentAuthor": "Cousland"
+            },
+            {
+                "commentText": "I would love to be Merril. Imagine being able to sit back and relax for 10 years? I need a good holiday right now!",
+                "commentAuthor": "Hawke"
+            },
+            {
+                "commentText": "Same here, Hawke! Looking forward to reading Part 2, Mahariel!",
+                "commentAuthor": "Tabris"
+            },
+            {
+                "commentText": "Thanks everyone. There's so much potential--I'm so excited about putting together a 100-parter. Strap yourself in for a crazy ride, everyone!",
+                "commentAuthor": "Mahariel"
+            }
+        ]
+    },
+    {
+        "storyTitle": "Villain",
+        "storyDescription": "We’re always playing heroes in fantasy video games—here’s a concept where you can play the villain!",
+        "storyContent": "I’ve been thinking about this concept for ages—an open world RPG video game which has all the characteristics of an epic adventure. However, instead of your character being the Hero, you’re actually the villain. Now, it’s not obvious you’re the villain. No, no. Instead, you’re led to believe you’re the hero looking for the villain. Your choices begin pretty basic and simple, and you feel like although you’re having to make slightly uncomfortable decisions, it’s for the greater good. But then, as the game continues, you begin to notice your decisions are becoming more difficult—you have more people fearing you for what you’re doing, and no matter how ‘good’ your choices are, something bad always happens. Then, you have your epic standoff with the actual hero. The question is: does the villain fall as with all Hero vs Villain stories, or will your villain stand tall and win?",
+        "storyAuthor": "Tabris",
+        "storyGenre": "Fantasy",
+        "storyChannel": "Video games",
+        "comments": [
+            {
+                "commentText": "Tabris... you're too good with these video game concepts. This sounds like it would be SICK!",
+                "commentAuthor": "Hawke"
+            },
+            {
+                "commentText": "Thanks Hawke. I've got so many, and I can't wait to share them all. I'm hoping I can get one off the ground--maybe we can work together?!",
+                "commentAuthor": "Tabris"
+            },
+            {
+                "commentText": "Yes!! Sign me up.",
+                "commentAuthor": "Hawke"
+            },
+            {
+                "commentText": "This would be awesome--right up my alley! I've got a little bit of experience with graphic design and film--maybe I can help you out too?!",
+                "commentAuthor": "Brosca"
+            }
+        ]
     }
 ]
