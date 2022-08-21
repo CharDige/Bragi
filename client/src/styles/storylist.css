@@ -55,6 +55,11 @@ button.btn-style {
     font-family: var(--body-font);
 }
 
+.story-details {
+    font-weight: bolder;
+    color: var(--green);
+}
+
 /* Pseudo styling */
 a.story-title-style:hover {
     color: var(--green);
