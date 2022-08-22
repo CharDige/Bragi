@@ -145,6 +145,18 @@ a.login-signup-link:hover {
     color: var(--light-colour);
 }
 
+a.profile-email-link {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--orange);
+    font-weight: bolder;
+}
+
+/* Pseudo selectors */
+a.profile-email-link:hover {
+    color: var(--green);
+}
+
 
 /* Media queries for responsive web application for phones and tablets */
 @media screen and (max-width: 991px) {

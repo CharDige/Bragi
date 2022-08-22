@@ -61,6 +61,11 @@ const Profile = () => {
                             <p className='profile-details'>
                                 {user.genre}
                             </p>
+
+                            <h3>Contact me to collaborate!</h3>
+                            <a href={`mailto:${user.email}`} className="profile-email-link">
+                                {user.email}
+                            </a>
                         </div>
 
                         <div className='col-12 col-lg-9'>
@@ -89,8 +94,9 @@ const Profile = () => {
                     Whoops! You need to be logged in to look at profiles. Please{' '}
                     <Link to="/login" className='login-signup-link'>login</Link> or <Link to="/signup" className='login-signup-link'>signup.</Link>
                 </p>
-            )}
-        </main>
+            )
+            }
+        </main >
     );
 };
 
