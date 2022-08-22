@@ -68,3 +68,8 @@ button.remove-comment-btn-style:hover {
     border: none;
     box-shadow: none;
 }
+
+button.add-comment-btn-style:hover {
+    background-color: var(--green);
+    color: var(--light-colour);
+}
