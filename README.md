@@ -28,7 +28,7 @@ Once logged in/signed up, the user will return to the list of stories and will b
 
 ```
 AS A storyteller
-I WANT to be able to read, share and collaborate on stories
+I WANT to be able to read and share stories with people around the world
 SO THAT I can connect with a community and open myself up to career opportunities in a storytelling industry.
 ```
 
