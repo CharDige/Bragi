@@ -45,6 +45,12 @@ footer {
     color: var(--light-colour)
 }
 
+/* Class selectors */
+.error {
+    color: var(--orange);
+    font-size: 20px;
+}
+
 /* Form styling */
 /* Element selectors */
 label {
@@ -130,6 +136,11 @@ input.form-input-style:focus {
 }
 
 button.login-signup-btn-style:hover {
+    background-color: var(--green);
+    color: var(--light-colour);
+}
+
+button.login-signup-btn-style:focus {
     background-color: var(--green);
     color: var(--light-colour);
 }

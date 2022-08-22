@@ -35,13 +35,13 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('No user found with this email address');
+        throw new AuthenticationError('Whoops! Either your email or your password is incorrect.');
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
+        throw new AuthenticationError('Whoops! Either your email or your password is incorrect.');
       }
 
       const token = signToken(user);
@@ -66,7 +66,7 @@ const resolvers = {
 
         return story;
       }
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError("Whoops! Looks like you can't post your story. Check that you're logged in and try again.");
     },
     addComment: async (parent, { storyId, commentText }, context) => {
       if (context.user) {
@@ -83,7 +83,7 @@ const resolvers = {
           }
         );
       }
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError("Whoops! Looks like you can't post your comment. Check that you're logged in and try again.");
     },
     removeStory: async (parent, { storyId }, context) => {
       if (context.user) {
@@ -99,7 +99,7 @@ const resolvers = {
   
         return story
       }
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError("Whoops! Looks like you can't delete your story. Check that you're logged in and try again.");
     },
     removeComment: async (parent, { storyId, commentId }, context) => {
       if (context.user) {
@@ -116,7 +116,7 @@ const resolvers = {
           { new: true }
         );
       }
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError("Whoops! Looks like you can't delete your comment. Check that you're logged in and try again.");
     }
   },
 };
